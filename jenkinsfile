@@ -3,9 +3,10 @@ node {
     git branch: 'main', url: 'https://github.com/azizbenabbes/jenkinstest.git'
 }
     stage('built') {
-    sh 'javac Main.java'
+    sh ' cd jenkinstest/ && javac Main.java'
 }
     stage('run') {
     sh 'java Main'
 }
+
 }
